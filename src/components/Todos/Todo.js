@@ -8,7 +8,8 @@ const Todo = (props) => {
     const todoCheckIconColor = props.completed ? 'green' : '#333'; 
     const titleStyle = props.completed ?  [styles.todoTitle, styles.titleComplete] : [styles.todoTitle];   
 
-    return (
+    return (//have to make changes in the <Text> component so 
+            //that it changes to a <TextInput> when the update toggle is on
         <View style = { styles.todoContainer}>
             <FontAwesome
                 name = {todoCheckIcon}
@@ -16,10 +17,12 @@ const Todo = (props) => {
                 color = {todoCheckIconColor }
                 onPress = { e => props.checkBoxToggle(props.index)}
             />
+            
             <Text style = {titleStyle}>{props.title}</Text>
+
             {props.completed && 
             <MaterialIcons
-                style = {styles.deleleIcon}
+                style = {styles.deleteIcon}
                 name = {'delete-forever'}
                 size = {styles.checkBoxIcon.fontSize}
                 color = 'red'
@@ -56,7 +59,7 @@ const styles = StyleSheet.create({
         textDecorationLine: 'line-through', 
         textDecorationStyle: 'solid'
     }, 
-    deleleIcon:{
+    deleteIcon:{
         position: 'absolute', 
         right: 10, 
         top: 10

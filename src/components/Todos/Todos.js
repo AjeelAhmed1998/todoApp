@@ -26,6 +26,7 @@ const Todos = (props) => {
 
 const styles = StyleSheet.create({
     noTodo: {
+        paddingTop: 30,
         fontSize: GlobalStyles.fontSize, 
         color: GlobalStyles.color, 
         fontWeight: 'bold'
