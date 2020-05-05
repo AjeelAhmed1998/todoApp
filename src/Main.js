@@ -1,3 +1,4 @@
+//hello this is a test
 import * as React from "react";
 import { Text, View, StyleSheet, TextInput, ScrollView } from "react-native";
 import   Constants   from "expo-constants";
